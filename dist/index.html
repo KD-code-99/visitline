@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Turn event access observations into a clear, portable route card. A local-first working prototype.">
+  <title>Visitline — know what to expect before you go</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#workspace">Skip to the route workspace</a>
+  <header class="site-header" id="app-header">
+    <a href="#" class="wordmark" aria-label="Visitline home"><svg viewBox="0 0 38 32" aria-hidden="true"><path d="M5 5v14q0 8 8 8h20M18 5v7q0 7 8 7h7"/><circle cx="5" cy="5" r="3"/><circle cx="18" cy="5" r="3"/><circle cx="33" cy="19" r="3"/><circle cx="33" cy="27" r="3"/></svg>Visitline<span>Know what to expect before you go.</span></a>
+    <nav aria-label="Plan controls"><button id="new-event" class="quiet">New plan</button><button id="load-example" class="quiet">Try an example</button><button id="import-record" class="quiet">Open a plan</button><input type="file" id="record-file" accept="application/json,.json" hidden></nav>
+  </header>
+  <p id="file-read-status" class="file-read-status" role="status" hidden>Opening your file. You can edit again after choosing whether to replace this plan.</p>
+  <main id="workspace">
+    <div class="work-heading"><div><h1 id="event-title"></h1><p id="event-meta"></p></div><span class="demo-label" id="demo-label">Fictional example</span></div>
+    <div class="session-line"><span class="session-dot" aria-hidden="true"></span><p id="session-state">Work stays in this tab. Download a record to keep it.</p><button id="edit-event" class="text-button">Edit event details</button></div>
+    <p id="pending-edits" class="draft-note" role="status" hidden>You have edits to save. Use the button below each edited form before previewing or downloading. Your edits stay here when you switch between parts of the route.</p>
+    <p id="notice" class="notice" role="status" aria-live="polite" tabindex="-1" hidden></p>
+    <section id="event-editor" class="event-editor" aria-labelledby="event-editor-heading" hidden>
+      <h2 id="event-editor-heading">Event details</h2>
+      <form id="event-form"><div class="form-grid"><label>Event name<input id="event-name-input" maxlength="100" required></label><label>Event date <span>(optional)</span><input id="event-date-input" type="date"></label><label class="wide">Location or arrival note <span>(optional)</span><input id="event-location-input" maxlength="180"></label><label class="wide">How visitors can check other needs <span>(optional)</span><input id="event-contact-input" maxlength="200" placeholder="For example: ask the event host about hearing support"></label></div><div class="form-actions"><button class="primary" type="submit">Save event details</button><button type="button" id="cancel-event" class="quiet">Cancel</button></div></form>
+    </section>
+    <div class="workspace-grid">
+      <aside class="visitor-checks" aria-labelledby="checks-heading">
+        <h2 id="checks-heading">What does the visitor need?</h2>
+        <p id="needs-help">Choose their needs for this visit. The example numbers are made up.</p>
+        <form id="checks-form">
+          <label class="check-label"><input id="step-free" type="checkbox"><span>No steps</span></label>
+          <label class="width-label" for="min-width">Space needed to get through</label><div class="number-unit"><input id="min-width" type="number" min="1" max="500" step="0.1" required aria-describedby="width-help"><span>cm</span></div>
+          <label class="check-label"><input id="include-toilet" type="checkbox"><span>Check the way to a toilet</span></label>
+          <p id="checks-draft" class="draft-note" hidden>Use Update results to include these changes.</p><button class="primary" type="submit">Update results<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></button>
+        </form>
+        <p class="form-help" id="width-help">Allow enough space for the person and any mobility aid they use.</p>
+        <details class="scope-details"><summary>What else should I check?</summary><p>This compares steps, usable space and whether the route is open, using details entered by the organiser. Visitline cannot confirm that a venue is safe, meets legal standards or suits every access need.</p><p>Ask about anything else you need, such as slopes, surfaces, hearing support, assistance or emergency exits. Check that the details are still current.</p></details>
+        <div class="legend" aria-label="Result key"><p><span class="state-marker met" aria-hidden="true"></span>These details match</p><p><span class="state-marker unknown" aria-hidden="true"></span>Needs checking</p><p><span class="state-marker blocked" aria-hidden="true"></span>Does not meet these needs</p></div>
+      </aside>
+      <section class="route-workspace" aria-labelledby="route-heading">
+        <div class="section-heading"><div><h2 id="route-heading">Check the whole journey.</h2><p id="overview"></p></div><button id="add-route" class="quiet">Add another route</button></div>
+        <div id="route-options" class="route-options" aria-label="Choose a route"></div>
+        <div class="selected-heading"><h3 id="selected-route-title"></h3><button id="rename-route" class="text-button">Rename route</button></div>
+        <div id="route-result" class="route-result" aria-live="polite"></div>
+        <ol id="route-chain" class="route-chain" aria-label="Parts of the visit"></ol>
+        <div id="next-observation" class="next-observation"></div>
+        <section class="observation-editor" id="observation-editor" aria-labelledby="observation-heading">
+          <div class="editor-title"><div><h3 id="observation-heading">What was checked?</h3><p id="observation-context"></p></div><span class="small-label">For the organiser</span></div>
+          <form id="observation-form">
+            <div class="form-grid">
+              <label class="wide">Name this part of the route<input id="stage-title" required maxlength="100"></label>
+              <label>Space to get through (cm)<span>Leave blank if not measured</span><input id="stage-width" type="number" min="0.1" max="10000" step="0.1" placeholder="Not measured"></label>
+              <label>Number of steps<span>Leave blank if not known</span><input id="stage-steps" type="number" min="0" max="1000" step="1" placeholder="Not known"></label>
+              <label>Is this part open?<select id="stage-availability"><option value="unknown">Not sure yet</option><option value="open">Yes — open</option><option value="closed">No — closed</option></select></label>
+              <label>When was this checked?<input id="stage-date" type="date"></label>
+              <label class="wide">What did you check, and how?<textarea id="stage-note" rows="3" maxlength="600" placeholder="For example: I measured the doorway today, with the door open."></textarea></label>
+            </div>
+            <p class="form-help">Measure the narrowest space someone can pass through, with doors open. Add only what you know; leave anything else blank.</p>
+            <p id="observation-draft" class="draft-note" hidden>Use Save this detail to include your changes in the results.</p>
+            <button class="primary" type="submit">Save this detail<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg></button>
+          </form>
+        </section>
+      </section>
+    </div>
+    <section class="handoff" aria-labelledby="handoff-heading"><div><h2 id="handoff-heading">Share the plan.</h2><p>The visitor card is for reading and printing. Keep an editable plan to make changes later. Downloaded files do not update themselves.</p></div><div class="handoff-actions"><button id="preview-card" class="quiet">Preview visitor card</button><button id="save-record" class="quiet">Download editable plan</button><button id="download-card" class="primary">Download visitor card<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m-4-4 4 4 4-4M4 14v3h12v-3"/></svg></button></div></section>
+    <section id="visitor-preview" class="visitor-preview" aria-labelledby="preview-heading" hidden><div class="section-heading"><h2 id="preview-heading">Visitor card preview</h2><button id="close-preview" class="quiet">Close preview</button></div><div id="preview-content"></div></section>
+    <footer><p>Your event details stay in this browser. Downloaded files include the details you entered.</p><p>Visitline compares the organiser’s notes. Ask them about anything else you need before visiting.</p></footer>
+  </main>
+  <dialog id="action-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-message"><form method="dialog"><h2 id="dialog-title"></h2><p id="dialog-message"></p><label id="dialog-input-label" hidden>Route name<input id="dialog-input" maxlength="100"></label><div class="form-actions"><button id="dialog-cancel" class="quiet" value="cancel" formnovalidate>Cancel</button><button id="dialog-accept" class="primary" value="accept">Continue</button></div></form></dialog>
+</body>
+</html>
