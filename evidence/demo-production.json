@@ -1,0 +1,186 @@
+{
+  "method": "Edited sequence of genuine browser-state captures, not a continuous live screen recording",
+  "voice": "Microsoft Zira Desktop, synthetic English, rate -1",
+  "total_planned_seconds": 163.535,
+  "scenes": [
+    {
+      "id": "01",
+      "title": "Know what to expect before you go",
+      "image": "visitline-01-start.jpg",
+      "crop": null,
+      "sentences": [
+        "Visitline helps an event organiser turn access details into a clear plan before someone leaves home.",
+        "This is a working, fictional example, using actual app captures.",
+        "For this visit, the person needs no steps, ninety centimetres of space, and a way to a toilet."
+      ],
+      "start_seconds": 0.0,
+      "duration_seconds": 22.605,
+      "source_size": [
+        1265,
+        712
+      ],
+      "source_sha256": "60108411704f775fc9f2aef2303c6f1bf1e33bed8ecf84d35dcd819873a80e80"
+    },
+    {
+      "id": "02",
+      "title": "A known obstacle has a clear reason",
+      "image": "visitline-02c-steps-version1.jpg",
+      "crop": [
+        0,
+        290,
+        1265,
+        780
+      ],
+      "sentences": [
+        "Start with the front entrance.",
+        "It has three steps, so it does not meet this person's needs.",
+        "The plan shows the reason and keeps the other parts of the visit visible."
+      ],
+      "start_seconds": 22.605,
+      "duration_seconds": 13.996,
+      "source_size": [
+        1265,
+        1941
+      ],
+      "source_sha256": "ef61db95cbb49918d5e8e96aa9474274445d1f0b8de79ef8ac115d905d12146e"
+    },
+    {
+      "id": "03",
+      "title": "Missing information stays visible",
+      "image": "visitline-03c-missing-full.jpg",
+      "crop": [
+        0,
+        290,
+        1265,
+        780
+      ],
+      "sentences": [
+        "The courtyard has no steps, but its doorway has not been measured.",
+        "That is a different problem: it needs checking.",
+        "Visitline does not treat a blank measurement as a match.",
+        "It points the organiser to the next detail to check."
+      ],
+      "start_seconds": 36.601,
+      "duration_seconds": 19.03,
+      "source_size": [
+        1265,
+        1941
+      ],
+      "source_sha256": "347b7d67284ace4acf82b1cbd5aecdf8eac08070b264f744374374a1dcef02f5"
+    },
+    {
+      "id": "04",
+      "title": "Add a measurement and its source",
+      "image": "visitline-04-add-measurement.jpg",
+      "crop": null,
+      "sentences": [
+        "The organiser enters ninety-six centimetres and explains how the space was measured.",
+        "These numbers and notes are made up for the demonstration.",
+        "Saving this detail updates the route result and the visitor card from the same record."
+      ],
+      "start_seconds": 55.632,
+      "duration_seconds": 16.711,
+      "source_size": [
+        1265,
+        712
+      ],
+      "source_sha256": "2a5a919a1eb1105fb3c04fa1fd8b4a6a2496e8b4614aa35f12736c19146c1840"
+    },
+    {
+      "id": "05",
+      "title": "The recorded details now match",
+      "image": "visitline-05c-match-version2.jpg",
+      "crop": [
+        0,
+        290,
+        1265,
+        780
+      ],
+      "sentences": [
+        "The courtyard now matches the selected ninety-centimetre need at every included part.",
+        "The wording refers to the organiser's notes and these particular needs.",
+        "It is not a guarantee that the venue suits every visitor."
+      ],
+      "start_seconds": 72.342,
+      "duration_seconds": 16.191,
+      "source_size": [
+        1265,
+        1956
+      ],
+      "source_sha256": "ef1188c331cc51d9474148b0651950f67d30eac2be4be546e0cd552f9f5b0e85"
+    },
+    {
+      "id": "06",
+      "title": "Change one need. Recheck every part.",
+      "image": "visitline-06c-needs-version3.jpg",
+      "crop": [
+        0,
+        290,
+        1265,
+        780
+      ],
+      "sentences": [
+        "Now change the space needed to one hundred centimetres.",
+        "Both the ninety-six-centimetre doorway and the ninety-five-centimetre way to the toilet change to does not match.",
+        "A suitable entrance alone is not enough to explain the whole visit."
+      ],
+      "start_seconds": 88.533,
+      "duration_seconds": 17.57,
+      "source_size": [
+        1265,
+        1941
+      ],
+      "source_sha256": "f09c79c880809d176daaa7f1ed03c335ef0f1fd548a371bafae42411a1cbd841"
+    },
+    {
+      "id": "07",
+      "title": "Share the facts behind the result",
+      "image": "visitline-07c-card-version3.jpg",
+      "crop": [
+        0,
+        1874,
+        1265,
+        920
+      ],
+      "sentences": [
+        "The visitor card includes the chosen needs, route details, dates, notes and limits.",
+        "Download the card for reading and printing, and keep the editable plan for later changes.",
+        "Files are snapshots: they do not update themselves.",
+        "The app needs no account or model API, and working details stay in the tab."
+      ],
+      "start_seconds": 106.103,
+      "duration_seconds": 25.729,
+      "source_size": [
+        1265,
+        3718
+      ],
+      "source_sha256": "42264b705886e3092445e0bea9b03d036c27471d931200fc1e96c3baa26fb4c8"
+    },
+    {
+      "id": "08",
+      "title": "A small, working proof of concept",
+      "image": "visitline-mobile-verified.jpg",
+      "crop": [
+        0,
+        0,
+        375,
+        850
+      ],
+      "sentences": [
+        "The Devpost Learn Skill Pack guided substantive planning documents, an app map and a bounded, AI-assisted build.",
+        "Ten automated tests and actual browser checks cover the core behaviour.",
+        "Feedback about confusing wording led to plain-language controls.",
+        "Next comes testing with real organisers and disabled visitors.",
+        "Visitline compares observations; it does not certify accessibility or safety."
+      ],
+      "start_seconds": 131.833,
+      "duration_seconds": 31.703,
+      "source_size": [
+        375,
+        3397
+      ],
+      "source_sha256": "96b5d9473455b71afc55332e424f19858d5eb774ee6365c84657e26fe731544d"
+    }
+  ],
+  "video_sha256": "6739770b67a1e1b0446977097478f6058039b17efa1853a792fced3f875da6ea"
+}

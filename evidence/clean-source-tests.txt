@@ -1,0 +1,20 @@
+Clean source copy after plain-language revision; Node v24.19.0; Windows; 2026-10-16T20:23:35.139Z
+No packages installed.
+✔ stairs and an unmeasured door remain distinct in the matched example (10.8384ms)
+✔ changing one requirement reevaluates all relevant stops, including the toilet (2.1877ms)
+✔ boundary width passes, closed passage fails, and provenance remains necessary (0.4718ms)
+✔ fresh records remain unconfirmed and JSON round trips preserve every fact (3.2322ms)
+✔ future observations reject at the shared boundary, including imported records (3.6403ms)
+✔ malformed versions, numbers, stage order and duplicate identities fail visibly (3.5869ms)
+✔ an independent tabular oracle agrees over all small width/step/availability combinations (5.5241ms)
+✔ the offline card contains exact results, selected checks and the fictional-data flag (13.6251ms)
+✔ hostile imported text remains text in the card, including attribute-breaking strings (2.1246ms)
+✔ JSON handoff reproduces an edited event and complete route judgments (17.5886ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 979.5291

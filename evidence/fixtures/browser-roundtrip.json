@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "revision": 4,
+  "demo": true,
+  "event": {
+    "title": "An evening at the makers hall",
+    "location": "Fictional community hall · demonstration only",
+    "date": "2026-10-24",
+    "contact": "Example host: ask about any access needs outside these checks."
+  },
+  "requirements": {
+    "stepFree": true,
+    "minWidthCm": 100,
+    "includeToilet": true
+  },
+  "routes": [
+    {
+      "id": "front",
+      "name": "Through the front entrance",
+      "stages": [
+        {
+          "id": "front-arrival",
+          "kind": "arrival",
+          "title": "Arrival point",
+          "widthCm": 140,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Fictional host walk-through. Clear opening measured at the narrowest point."
+        },
+        {
+          "id": "front-entrance",
+          "kind": "entrance",
+          "title": "Front door and steps",
+          "widthCm": 96,
+          "steps": 3,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Fictional observation: three fixed steps at the front entrance; no ramp on this route."
+        },
+        {
+          "id": "front-seating",
+          "kind": "seating",
+          "title": "Route to seating",
+          "widthCm": 110,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Fictional host walk-through. Clear opening measured at the narrowest point."
+        },
+        {
+          "id": "front-toilet",
+          "kind": "toilet",
+          "title": "Route to toilet",
+          "widthCm": 95,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Fictional host walk-through. Clear opening measured at the narrowest point."
+        }
+      ]
+    },
+    {
+      "id": "courtyard",
+      "name": "Through the courtyard",
+      "stages": [
+        {
+          "id": "courtyard-arrival",
+          "kind": "arrival",
+          "title": "Arrival point",
+          "widthCm": 140,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Fictional host walk-through. Clear opening measured at the narrowest point."
+        },
+        {
+          "id": "courtyard-entrance",
+          "kind": "entrance",
+          "title": "Courtyard doorway",
+          "widthCm": 96,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Fictional measurement draft: a 96 cm opening with the door held open."
+        },
+        {
+          "id": "courtyard-seating",
+          "kind": "seating",
+          "title": "Route to seating",
+          "widthCm": 110,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Fictional host walk-through. Clear opening measured at the narrowest point."
+        },
+        {
+          "id": "courtyard-toilet",
+          "kind": "toilet",
+          "title": "Route to toilet",
+          "widthCm": 95,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Fictional host walk-through. Clear opening measured at the narrowest point."
+        }
+      ]
+    }
+  ]
+}

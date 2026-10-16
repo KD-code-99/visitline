@@ -1,0 +1,2 @@
+Visitline ready at http://127.0.0.1:4187
+PASS: documented node server.mjs launched from the clean copied source; all seven application assets served HTTP 200.

@@ -1,0 +1,19 @@
+{
+  "video_sha256": "6739770b67a1e1b0446977097478f6058039b17efa1853a792fced3f875da6ea",
+  "video_bytes": 5446845,
+  "duration_seconds": 163.65,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 24.0,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "full_decode": "passed; no error output",
+  "audio_peak": 17543,
+  "audio_rms_dbfs": -23.49,
+  "audio_clipped_sample_ratio": 0.0,
+  "review_frames_extracted": 8,
+  "visual_frame_review": "One rendered frame per scene inspected; the corrected scene 02 was re-extracted and checked. Remaining segments were reused unchanged.",
+  "public_video_upload": "pending entrant upload"
+}

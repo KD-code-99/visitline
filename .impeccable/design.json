@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-16T20:27:42Z",
+  "title": "Design System: Visitline",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper"
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Near White"
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Green Ink"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Green Gray"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Quiet Divider"
+      },
+      "green": {
+        "role": "primary",
+        "displayName": "Matching Green"
+      },
+      "green-tint": {
+        "role": "primary",
+        "displayName": "Matching Green Tint"
+      },
+      "amber": {
+        "role": "secondary",
+        "displayName": "Checking Amber"
+      },
+      "amber-tint": {
+        "role": "secondary",
+        "displayName": "Checking Amber Tint"
+      },
+      "red": {
+        "role": "tertiary",
+        "displayName": "Problem Red"
+      },
+      "red-tint": {
+        "role": "tertiary",
+        "displayName": "Problem Red Tint"
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Focus Blue"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Event Heading",
+        "purpose": "The event title, with a fluid size and a 30-character maximum width."
+      },
+      "headline": {
+        "displayName": "Section Heading",
+        "purpose": "Major sections, with smaller local variants for needs and sharing."
+      },
+      "title": {
+        "displayName": "Working Title",
+        "purpose": "Route and editor titles using the system sans-serif stack."
+      },
+      "body": {
+        "displayName": "Working Copy",
+        "purpose": "Prose and controls, with supporting text sized locally."
+      },
+      "label": {
+        "displayName": "Field Label",
+        "purpose": "Sentence-case labels above form controls."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "button-color-transition",
+        "value": "background-color .16s, color .16s",
+        "purpose": "Button state colors; no explicit easing is declared."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }",
+        "purpose": "The source disables transitions and requests automatic scrolling."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1000px"
+      },
+      {
+        "name": "single-column",
+        "value": "760px"
+      },
+      {
+        "name": "vertical-route",
+        "value": "520px"
+      },
+      {
+        "name": "narrow-form",
+        "value": "380px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Default Button",
+      "kind": "button",
+      "refersTo": "button-default",
+      "description": "The transparent, bordered base control.",
+      "html": "<button type=\"button\" class=\"ds-button\">Continue</button>",
+      "css": ".ds-button{font-family:'Segoe UI',Arial,sans-serif;font-size:16px;line-height:1.55;font-weight:600;color:var(--ink,#193e36);border:1px solid var(--line,#cbd3c8);border-radius:5px;padding:11px 16px;min-height:44px;cursor:pointer;transition:background-color .16s,color .16s;background:transparent}.ds-button:hover{background:#e8ece3}.ds-button:focus-visible{outline:3px solid var(--focus,#235c9b);outline-offset:4px;}.ds-button:disabled{cursor:not-allowed;opacity:.55}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The ink action used to update results, save a detail or download a card.",
+      "html": "<button type=\"button\" class=\"ds-primary\">Save this detail<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"m4 10 4 4 8-8\"/></svg></button>",
+      "css": ".ds-primary{font-family:'Segoe UI',Arial,sans-serif;font-size:16px;line-height:1.55;font-weight:600;color:var(--ink,#193e36);border:1px solid var(--line,#cbd3c8);border-radius:5px;padding:11px 16px;min-height:44px;cursor:pointer;transition:background-color .16s,color .16s;background:var(--ink,#193e36);color:var(--white,#fffefa);border-color:var(--ink,#193e36);display:inline-flex;align-items:center;justify-content:center;gap:14px}.ds-primary svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}.ds-primary:hover{background:#2c574b}.ds-primary:focus-visible{outline:3px solid var(--focus,#235c9b);outline-offset:4px;}.ds-primary:disabled{cursor:not-allowed;opacity:.55}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "A near-white secondary operation with the same control geometry.",
+      "html": "<button type=\"button\" class=\"ds-quiet\">Preview visitor card</button>",
+      "css": ".ds-quiet{font-family:'Segoe UI',Arial,sans-serif;font-size:16px;line-height:1.55;font-weight:600;color:var(--ink,#193e36);border:1px solid var(--line,#cbd3c8);border-radius:5px;padding:11px 16px;min-height:44px;cursor:pointer;transition:background-color .16s,color .16s;background:var(--white,#fffefa)}.ds-quiet:hover{background:#e8ece3}.ds-quiet:focus-visible{outline:3px solid var(--focus,#235c9b);outline-offset:4px;}.ds-quiet:disabled{cursor:not-allowed;opacity:.55}@media(prefers-reduced-motion:reduce){.ds-quiet{transition:none}}"
+    },
+    {
+      "name": "Text Action",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "A compact underlined action within context.",
+      "html": "<button type=\"button\" class=\"ds-text-action\">Rename route</button>",
+      "css": ".ds-text-action{font-family:'Segoe UI',Arial,sans-serif;font-size:16px;line-height:1.55;font-weight:600;color:var(--ink,#193e36);border:1px solid var(--line,#cbd3c8);border-radius:5px;padding:11px 16px;min-height:44px;cursor:pointer;transition:background-color .16s,color .16s;padding:4px 0;border:0;border-radius:0;background:none;text-decoration:underline;text-underline-offset:4px;font-weight:500}.ds-text-action:hover{background:none}.ds-text-action:focus-visible{outline:3px solid var(--focus,#235c9b);outline-offset:4px;}.ds-text-action:disabled{cursor:not-allowed;opacity:.55}@media(prefers-reduced-motion:reduce){.ds-text-action{transition:none}}"
+    },
+    {
+      "name": "Observed Detail Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "An explicit label, measured value and instruction that preserves missing information.",
+      "html": "<label class=\"ds-field\">Space to get through (cm)<span>Leave blank if not measured</span><input type=\"number\" min=\"0.1\" max=\"10000\" step=\"0.1\" placeholder=\"Not measured\"></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:7px;font-family:'Segoe UI',Arial,sans-serif;font-size:.9rem;line-height:1.55;font-weight:600;color:var(--ink,#193e36)}.ds-field>span{color:var(--muted,#52675f);font-size:.82rem;font-weight:400}.ds-field input{font:inherit;width:100%;background:var(--white,#fffefa);border:1px solid #9aaa9d;color:var(--ink,#193e36);border-radius:4px;padding:10px 12px;min-height:44px;caret-color:var(--ink,#193e36)}.ds-field input::placeholder{color:#657369;opacity:1}.ds-field input:focus-visible{outline:3px solid var(--focus,#235c9b);outline-offset:4px;}"
+    },
+    {
+      "name": "Plan Controls",
+      "kind": "nav",
+      "description": "Wrapping quiet actions, rather than an active-page navigation system.",
+      "html": "<nav class=\"ds-plan-controls\" aria-label=\"Plan controls\"><button type=\"button\">New plan</button><button type=\"button\">Try an example</button><button type=\"button\">Open a plan</button></nav>",
+      "css": ".ds-plan-controls{display:flex;flex-wrap:wrap;gap:8px}.ds-plan-controls button{font-family:'Segoe UI',Arial,sans-serif;font-size:16px;line-height:1.55;font-weight:600;color:var(--ink,#193e36);border:1px solid var(--line,#cbd3c8);border-radius:5px;padding:11px 16px;min-height:44px;cursor:pointer;transition:background-color .16s,color .16s;background:var(--white,#fffefa)}.ds-plan-controls button:hover{background:#e8ece3}.ds-plan-controls button:focus-visible{outline:3px solid var(--focus,#235c9b);outline-offset:4px;}@media(max-width:760px){.ds-plan-controls{width:100%}.ds-plan-controls button{font-size:.81rem;flex:1;padding:8px}}@media(prefers-reduced-motion:reduce){.ds-plan-controls button{transition:none}}"
+    },
+    {
+      "name": "Fictional Example Label",
+      "kind": "chip",
+      "refersTo": "label-demo",
+      "description": "An informational amber label; it is not an interactive filter.",
+      "html": "<span class=\"ds-demo-label\">Fictional example</span>",
+      "css": ".ds-demo-label{display:inline-flex;border:1px solid #ceb893;padding:5px 11px;font-family:'Segoe UI',Arial,sans-serif;font-size:.78rem;line-height:1.55;border-radius:3px;white-space:nowrap;font-weight:500;color:var(--amber,#80501c);background:var(--amber-tint,#fbefd8)}@media(max-width:760px){.ds-demo-label{font-size:.74rem}}"
+    },
+    {
+      "name": "Route Choice",
+      "kind": "card",
+      "refersTo": "route-option",
+      "description": "A selected route card with an explicit unknown result.",
+      "html": "<button type=\"button\" class=\"ds-route-option\" aria-pressed=\"true\"><span class=\"ds-route-option-name\">Alternative route<svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h12m-5-5 5 5-5 5\"/></svg></span><span class=\"ds-status-line\"><span class=\"ds-state-marker\" aria-hidden=\"true\"></span>Needs checking</span></button>",
+      "css": ".ds-route-option{font-family:'Segoe UI',Arial,sans-serif;font-size:16px;line-height:1.55;font-weight:600;color:var(--ink,#193e36);border:1px solid var(--line,#cbd3c8);border-radius:5px;padding:11px 16px;min-height:44px;cursor:pointer;transition:background-color .16s,color .16s;text-align:left;padding:15px 16px;background:transparent;display:grid;gap:9px;font-weight:500}.ds-route-option:hover{background:#e8ece3}.ds-route-option[aria-pressed=true]{border:2px solid var(--ink,#193e36);padding:14px 15px;background:var(--white,#fffefa)}.ds-route-option:focus-visible{outline:3px solid var(--focus,#235c9b);outline-offset:4px;}.ds-route-option-name{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:.95rem}.ds-route-option-name svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;width:16px;height:16px}.ds-status-line{display:flex;gap:8px;align-items:center;font-size:.78rem;font-weight:600;color:var(--amber,#80501c)}.ds-state-marker{width:12px;height:12px;display:inline-block;border:2px dashed currentColor;border-radius:50%;flex-shrink:0;background:var(--amber-tint,#fbefd8)}@media(max-width:760px){.ds-route-option{padding:12px}.ds-route-option[aria-pressed=true]{padding:11px}.ds-route-option-name{font-size:.84rem}.ds-status-line{align-items:flex-start;font-size:.71rem}.ds-state-marker{margin-top:3px}}@media(prefers-reduced-motion:reduce){.ds-route-option{transition:none}}"
+    },
+    {
+      "name": "Route Result",
+      "kind": "card",
+      "refersTo": "route-result",
+      "description": "A tinted summary pairs result words with a causal explanation. This illustrative sample uses an unconfirmed measurement.",
+      "html": "<div class=\"ds-route-result ds-unknown\"><p>Needs checking</p><p>Entrance: space has not been measured.</p></div>",
+      "css": ".ds-route-result{margin:14px 0 22px;padding:13px 16px;font-family:'Segoe UI',Arial,sans-serif;font-size:.9rem;line-height:1.55;border-radius:3px;background:#e8ede4;color:var(--ink,#193e36)}.ds-route-result p{margin:0;max-width:72ch}.ds-route-result p+p{margin-top:4px;font-size:.8rem}.ds-route-result.ds-met{background:var(--green-tint,#e6f0e5);color:#174d39}.ds-route-result.ds-unknown{background:var(--amber-tint,#fbefd8);color:#6e4419}.ds-route-result.ds-blocked{background:var(--red-tint,#f8e9e2);color:#81342c}"
+    },
+    {
+      "name": "Continuous Visit Line",
+      "kind": "custom",
+      "description": "An illustrative four-part route showing the implemented matching, unknown, blocked and excluded treatments. These are sample states, not venue observations.",
+      "html": "<ol class=\"ds-route-chain\" aria-label=\"Example parts of the visit\"><li class=\"ds-chain-stage ds-met\"><button type=\"button\" class=\"ds-stage-target\" aria-pressed=\"false\"><span class=\"ds-stage-stop\"><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"m4 10 4 4 8-8\"/></svg></span><span class=\"ds-stage-kind\">Arrival</span><span class=\"ds-stage-name\">Arrival point</span><span class=\"ds-stage-measurement\">90 cm of space</span><span class=\"ds-stage-status\">Details match</span></button></li><li class=\"ds-chain-stage ds-unknown\"><button type=\"button\" class=\"ds-stage-target\" aria-pressed=\"true\"><span class=\"ds-stage-stop\"><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M7 7a3 3 0 0 1 6 0c0 2-3 2-3 5m0 3h.01\"/></svg></span><span class=\"ds-stage-kind\">Entrance</span><span class=\"ds-stage-name\">Doorway</span><span class=\"ds-stage-measurement\">Space not measured</span><span class=\"ds-stage-status\">Needs checking</span></button></li><li class=\"ds-chain-stage ds-blocked\"><button type=\"button\" class=\"ds-stage-target\" aria-pressed=\"false\"><span class=\"ds-stage-stop\"><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"m5 5 10 10M15 5 5 15\"/></svg></span><span class=\"ds-stage-kind\">Seating</span><span class=\"ds-stage-name\">Seating space</span><span class=\"ds-stage-measurement\">80 cm of space</span><span class=\"ds-stage-status\">Does not match</span></button></li><li class=\"ds-chain-stage ds-excluded\"><button type=\"button\" class=\"ds-stage-target\" aria-pressed=\"false\"><span class=\"ds-stage-stop\"><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M5 10h10\"/></svg></span><span class=\"ds-stage-kind\">Toilet</span><span class=\"ds-stage-name\">Way to a toilet</span><span class=\"ds-stage-measurement\">Space not measured</span><span class=\"ds-stage-status\">Not included</span></button></li></ol>",
+      "css": ".ds-route-chain{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0;padding:0;gap:0;font-family:'Segoe UI',Arial,sans-serif;line-height:1.55;color:var(--ink,#193e36)}.ds-chain-stage{min-width:0;position:relative;padding:0 12px 0 0}.ds-chain-stage:not(:last-child)::after{content:'';position:absolute;height:2px;background:#9caf9e;top:19px;left:38px;right:0;z-index:0}.ds-stage-target{display:block;width:100%;min-height:155px;padding:0 9px 12px 0;border:0;border-radius:0;background:none;text-align:left;position:relative;font:inherit;font-weight:400;color:inherit;cursor:pointer}.ds-stage-target:hover{background:none}.ds-stage-target:focus-visible{outline:3px solid var(--focus,#235c9b);outline-offset:4px;}.ds-stage-stop{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:2px solid var(--green,#22664f);color:var(--green,#22664f);background:var(--white,#fffefa);border-radius:50%}.ds-stage-stop svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}.ds-unknown .ds-stage-stop{border-color:var(--amber,#80501c);border-style:dashed;color:var(--amber,#80501c);background:var(--amber-tint,#fbefd8)}.ds-blocked .ds-stage-stop{border-color:var(--red,#923e35);color:var(--red,#923e35);background:var(--red-tint,#f8e9e2)}.ds-excluded{color:var(--muted,#52675f)}.ds-excluded .ds-stage-stop{border-color:#76877d;color:#76877d;background:var(--paper,#f7f5ee)}.ds-stage-target[aria-pressed=true] .ds-stage-stop{outline:3px solid var(--ink,#193e36);outline-offset:4px}.ds-stage-kind{display:block;font-size:.75rem;color:var(--muted,#52675f);margin-top:15px}.ds-stage-name{display:block;font-weight:600;font-size:.91rem;margin-top:3px}.ds-stage-measurement{display:block;font-size:.78rem;margin-top:7px;font-variant-numeric:tabular-nums}.ds-stage-status{display:block;font-size:.74rem;font-weight:600;margin-top:5px}.ds-unknown .ds-stage-status{color:var(--amber,#80501c)}.ds-blocked .ds-stage-status{color:var(--red,#923e35)}.ds-met .ds-stage-status{color:var(--green,#22664f)}@media(max-width:1000px){.ds-stage-name{font-size:.84rem}}@media(max-width:760px){.ds-chain-stage{padding-right:5px}.ds-chain-stage:not(:last-child)::after{left:36px}.ds-stage-stop{width:36px;height:36px}.ds-stage-target{padding-right:6px}.ds-stage-kind{font-size:.7rem}.ds-stage-name{font-size:.8rem;overflow-wrap:anywhere}.ds-stage-measurement{font-size:.72rem}.ds-stage-status{font-size:.7rem}}@media(max-width:520px){.ds-route-chain{grid-template-columns:1fr}.ds-chain-stage{padding:0 0 16px}.ds-chain-stage:not(:last-child)::after{top:36px;left:17px;right:auto;width:2px;height:calc(100% - 32px)}.ds-stage-target{min-height:88px;padding:0 0 8px 54px}.ds-stage-stop{position:absolute;left:0;top:0}.ds-stage-kind{margin:0}.ds-stage-name{font-size:.95rem}.ds-stage-measurement,.ds-stage-status{font-size:.8rem}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Continuous Visit Line",
+    "overview": "Visitline uses a continuous visit line as its organising image: arrival, entrance, seating and toilet remain connected so a reader can locate the part that matches, needs checking or causes a problem. Warm paper, dark green ink, restrained borders and modest corners keep the workspace calm while the route carries the most distinctive geometry.\n\nA self-hosted serif gives the name and major headings a human, editorial character; familiar system sans-serif text carries controls, measurements and explanations. The interface uses plain-English needs, parts and plan wording following the user's feedback that technical wording can be confusing. Density follows the authoring task: a compact needs column beside a broader route workspace, then a single column on smaller screens.",
+    "keyCharacteristics": [
+      "A connected route with explicit part-by-part results.",
+      "Warm paper and near-white working surfaces with dark green ink.",
+      "Self-hosted Newsreader headings paired with system sans-serif controls.",
+      "State words reinforced by symbols, fill, border style and color.",
+      "Flat surfaces, modest corners and visible keyboard-focus outlines."
+    ],
+    "rules": [
+      {
+        "name": "The State Has Words Rule",
+        "body": "Every result keeps a visible text label. Color and shape reinforce the label; neither replaces it.",
+        "section": "colors"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Use borders and surface color to separate the current workspace. The implemented system has no box shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve the connected order of the visit parts when adapting the route diagram.",
+      "Do show state words with the existing marker, symbol and border treatments.",
+      "Do keep selected-route borders and selected-part outlines distinct from the blue keyboard-focus outline.",
+      "Do use plain-English needs, parts and plan wording, with concrete action labels.",
+      "Do keep observation forms and visitor-preview surfaces near-white against the paper canvas."
+    ],
+    "donts": [
+      "Don't show a positive result for information that still needs checking.",
+      "Don't rely on green, amber or red alone to explain a result.",
+      "Don't add drop shadows to the current flat containers.",
+      "Don't turn the modest corner values into pill-shaped controls.",
+      "Don't treat this source-led documentation as evidence of design approval or an accessibility audit."
+    ]
+  }
+}

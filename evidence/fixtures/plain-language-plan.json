@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "revision": 3,
+  "demo": true,
+  "event": {
+    "title": "An evening at the makers hall",
+    "location": "Fictional community hall · demonstration only",
+    "date": "2026-10-24",
+    "contact": "Example host: ask about any access needs outside these checks."
+  },
+  "requirements": {
+    "stepFree": true,
+    "minWidthCm": 100,
+    "includeToilet": true
+  },
+  "routes": [
+    {
+      "id": "front",
+      "name": "Through the front entrance",
+      "stages": [
+        {
+          "id": "front-arrival",
+          "kind": "arrival",
+          "title": "Arrival point",
+          "widthCm": 140,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Made-up example: the organiser measured the narrowest space someone can get through."
+        },
+        {
+          "id": "front-entrance",
+          "kind": "entrance",
+          "title": "Front door and steps",
+          "widthCm": 96,
+          "steps": 3,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Made-up example: there are three steps at the front door, with no ramp on this route."
+        },
+        {
+          "id": "front-seating",
+          "kind": "seating",
+          "title": "Route to seating",
+          "widthCm": 110,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Made-up example: the organiser measured the narrowest space someone can get through."
+        },
+        {
+          "id": "front-toilet",
+          "kind": "toilet",
+          "title": "Route to toilet",
+          "widthCm": 95,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Made-up example: the organiser measured the narrowest space someone can get through."
+        }
+      ]
+    },
+    {
+      "id": "courtyard",
+      "name": "Through the courtyard",
+      "stages": [
+        {
+          "id": "courtyard-arrival",
+          "kind": "arrival",
+          "title": "Arrival point",
+          "widthCm": 140,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Made-up example: the organiser measured the narrowest space someone can get through."
+        },
+        {
+          "id": "courtyard-entrance",
+          "kind": "entrance",
+          "title": "Courtyard doorway",
+          "widthCm": 96,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Made-up example: the organiser measured 96 cm of usable space with the door open."
+        },
+        {
+          "id": "courtyard-seating",
+          "kind": "seating",
+          "title": "Route to seating",
+          "widthCm": 110,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Made-up example: the organiser measured the narrowest space someone can get through."
+        },
+        {
+          "id": "courtyard-toilet",
+          "kind": "toilet",
+          "title": "Route to toilet",
+          "widthCm": 95,
+          "steps": 0,
+          "availability": "open",
+          "checkedOn": "2026-10-16",
+          "note": "Made-up example: the organiser measured the narrowest space someone can get through."
+        }
+      ]
+    }
+  ]
+}
