@@ -1,0 +1,12 @@
+/devpost/learner-profile.md
+/.agents/
+/.state/
+/.impeccable/review/
+/.impeccable/mocks/
+/.impeccable/questions/
+/artifacts/
+.env
+.env.*
+!.env.example
+node_modules/
+*.log
